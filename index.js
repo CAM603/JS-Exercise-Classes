@@ -131,9 +131,6 @@ class Lambdasian {
 class Instructor extends Lambdasian {
   constructor(atts) {
     super(atts);
-    this.name = atts.name;
-    this.age = atts.age;
-    this.location = atts.location;
     this.specialty = atts.specialty;
     this.favLanguage = atts.favLanguage;
     this.catchPhrase = atts.catchPhrase;
@@ -169,9 +166,6 @@ class Instructor extends Lambdasian {
 class Student extends Lambdasian {
   constructor(atts) {
     super(atts);
-    this.name = atts.name;
-    this.age = atts.age;
-    this.location = atts.location;
     this.previousBackground = atts.previousBackground;
     this.className = atts.className;
     this.favSubjects = atts.favSubjects;
@@ -211,12 +205,6 @@ class Student extends Lambdasian {
 class ProjectManager extends Instructor {
   constructor(atts) {
     super(atts);
-    this.name = atts.name;
-    this.age = atts.age;
-    this.location = atts.location;
-    this.specialty = atts.specialty;
-    this.favLanguage = atts.favLanguage;
-    this.catchPhrase = atts.catchPhrase;
     this.gradClassName = atts.gradClassName;
     this.favInstructor = atts.favInstructor;
   }
