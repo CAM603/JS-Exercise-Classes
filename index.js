@@ -142,7 +142,12 @@ class Instructor extends Lambdasian {
     return `Today we are learning about ${subject}`
   }
   grade(student, subject) {
-    return `${student.name} earns a perfect score on ${subject}`
+    return `${student.name} earned a perfect score on ${subject}`
+  }
+  grade2(student) {
+    let score = Math.floor(Math.random() * (20 - (-20) + 1) + (-20));
+    student.grade += score;
+    return `${student}'s grade has been updated! Their new average is now ${student.grade}.`
   }
 }
 
@@ -170,6 +175,7 @@ class Student extends Lambdasian {
     this.previousBackground = atts.previousBackground;
     this.className = atts.className;
     this.favSubjects = atts.favSubjects;
+    this.grade = 100;
   }
   listSubjects() {
     return `Loving ${this.favSubjects}!`
@@ -179,6 +185,13 @@ class Student extends Lambdasian {
   }
   sprintChallenge(subject) {
     return `${this.name} has begun sprint challenge on ${subject}`
+  }
+  graduate() {
+    if (this.grade >= 70) {
+      return `${this.name} graduated Lambda School and is now making the big bucks!`
+    } else {
+      return `${this.name} needs to take more tests`
+    }
   }
 }
 
